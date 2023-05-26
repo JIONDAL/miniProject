@@ -7,22 +7,37 @@ import javafx.stage.Stage;
 
 public class Opener {
 	private Stage primaryStage;
-	
+
 	public void setPrimaryStage(Stage primaryStage) {
 		this.primaryStage = primaryStage;
 	}
+
 	public Stage getPrimaryStage() {
 		return primaryStage;
 	}
-	
-	public void loginOpen() {
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("loginForm.fxml"));
-		
-		Parent loginForm;
+
+	public void adminFormOpen() {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("adminForm.fxml"));
+
+		Parent adminForm;
 		try {
-			loginForm = loader.load();
-			primaryStage.setScene(new Scene(loginForm));
-			primaryStage.setTitle("메인 화면");
+			adminForm = loader.load();
+			primaryStage.setScene(new Scene(adminForm));
+			primaryStage.setTitle("관리자 화면");
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void userFormOpen() {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("userForm.fxml"));
+
+		Parent userForm;
+		try {
+			userForm = loader.load();
+			primaryStage.setScene(new Scene(userForm));
+			primaryStage.setTitle("입주민 화면");
 			primaryStage.show();
 		} catch (Exception e) {
 			e.printStackTrace();

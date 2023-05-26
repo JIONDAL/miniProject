@@ -28,10 +28,12 @@ public class LoginController implements Initializable{
 	// 로그인 버튼을 클릭하면 동작하는 메서드
 	public void loginProc() {
 		service.login(idFld.getText(), pwFld.getText());
-		// 로그인성공이라면 메인화면을 로그인 창이 있는 곳에 메인화면을 실행
+		// 로그인성공이라면 메인화면을 로그인 창이 있는 곳에 userPage or adminPage을 실행
 		// 로그인실패라면 아무것도 하지 않는다.
-		if(Login.getId() != null) {
-//			opener.mainOpen();
+		if(Login.getId().equals("admin")) {
+			opener.adminFormOpen();
+		}else{
+			opener.userFormOpen();
 		}
 	}
 }

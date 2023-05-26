@@ -22,13 +22,3 @@ public class CommonService {// 수정하였습니다.
 		stage.close();
 	}
 }
-
-
-
-
-
-
-
-
-
-
