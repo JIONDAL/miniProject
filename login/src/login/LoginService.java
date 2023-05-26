@@ -12,9 +12,11 @@ public class LoginService {
 	
 	public void login(String id, String pw) {
 		if(id == null || id.isEmpty()) {
+			CommonService.msg("아이디를 입력하세요.");
 			return;
 		}
 		if(pw == null || pw.isEmpty()) {
+			CommonService.msg("비밀번호를 입력하세요.");
 			return;
 		}
 

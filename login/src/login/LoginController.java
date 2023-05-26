@@ -34,4 +34,15 @@ public class LoginController implements Initializable{
 //			opener.mainOpen();
 		}
 	}
+	
+	public void cancelProc() {
+		idFld.clear();
+		pwFld.clear();
+		idFld.requestFocus();
+	}
+	
+	public void regProc() {
+		// 회원가입 화면을 새창으로 실행
+//		opener.regOpen();
+	}
 }
