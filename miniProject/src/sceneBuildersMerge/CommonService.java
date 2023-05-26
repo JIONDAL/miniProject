@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
-public class CommonService {
+public class CommonService {// 수정하였습니다.
 
 	public static void msg(String contextText) {
 		Alert alert = new Alert(AlertType.INFORMATION);
