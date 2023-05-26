@@ -14,17 +14,16 @@ public class Main extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("loginForm.fxml"));
-		
 		Parent form = loader.load();
 		LoginController loginCon = loader.getController();
 		
 		Opener opener = new Opener();
 		loginCon.setOpener(opener);
+		//기존 창에서 열 때
 		opener.setPrimaryStage(primaryStage);
 		
 		primaryStage.setTitle("로그인 화면");
 		primaryStage.setScene(new Scene(form));
 		primaryStage.show();
 	}
- 
 }
